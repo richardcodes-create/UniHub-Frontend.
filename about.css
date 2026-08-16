@@ -1,0 +1,1148 @@
+/* =========================================
+   UNIHUB - ABOUT PAGE
+   COMPLETE RESPONSIVE CSS
+========================================= */
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    color: #111827;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    white-space: nowrap;
+
+    z-index: 10001;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+
+/* =========================================
+   NAV MENU
+========================================= */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-left: auto;
+}
+
+
+/* =========================================
+   NAV LINKS
+========================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 10px 0;
+
+    color: #475467;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2563eb;
+}
+
+
+/* Underline */
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   STUDENT PORTAL BUTTON
+========================================= */
+
+.portal-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.portal-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    z-index: 10002;
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    background: #111827;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.menu-btn:hover {
+    background: #f3f4f6;
+}
+
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(10, 27, 58, 0.95),
+            rgba(15, 52, 108, 0.78),
+            rgba(15, 52, 108, 0.45)
+        ),
+        url("images/campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.about-hero-content {
+    color: #ffffff;
+
+    max-width: 750px;
+}
+
+.about-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #bfdbfe;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.about-label.blue {
+    color: #2563eb;
+}
+
+.about-hero h1 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+}
+
+.about-hero p {
+    max-width: 650px;
+
+    color: #dbeafe;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   STORY
+========================================= */
+
+.about-story {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.about-story-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* Campus image */
+
+.about-campus-image {
+    min-height: 450px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0f3d91
+        );
+
+    box-shadow:
+        0 25px 50px rgba(37, 99, 235, 0.18);
+}
+
+.about-campus-image div {
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* Story text */
+
+.about-story-text h2 {
+    margin-bottom: 22px;
+
+    color: #101828;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+.about-story-text p {
+    margin-bottom: 17px;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.about-heading {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.about-heading h2 {
+    margin-bottom: 15px;
+
+    color: #101828;
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+.about-heading p {
+    color: #667085;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   MISSION
+========================================= */
+
+.about-mission {
+    padding: 100px 0;
+
+    background: #f7f9fc;
+}
+
+.mission-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.mission-box {
+    padding: 35px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.mission-box:hover {
+    transform: translateY(-7px);
+
+    border-color: #b8cdf7;
+
+    box-shadow:
+        0 20px 40px rgba(16, 24, 40, 0.08);
+}
+
+.mission-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 14px;
+
+    background: #eff6ff;
+
+    font-size: 25px;
+}
+
+.mission-box h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+
+    font-size: 19px;
+}
+
+.mission-box p {
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WHY UNIHUB
+========================================= */
+
+.why-section {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.why-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.why-box {
+    padding: 30px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.why-box:hover {
+    transform: translateY(-7px);
+
+    border-color: #b8cdf7;
+
+    box-shadow:
+        0 20px 40px rgba(16, 24, 40, 0.08);
+}
+
+.why-number {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.why-box h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+
+    font-size: 18px;
+}
+
+.why-box p {
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats {
+    padding: 75px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #1d4ed8,
+            #2563eb
+        );
+
+    color: #ffffff;
+}
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+}
+
+.stat {
+    padding: 10px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat h2 {
+    margin-bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 42px;
+}
+
+.stat p {
+    color: #dbeafe;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.about-cta {
+    padding: 90px 0;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.about-cta h2 {
+    margin-bottom: 15px;
+
+    color: #101828;
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1.5px;
+}
+
+.about-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+.about-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 25px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.about-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #0b1220;
+
+    color: #ffffff;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 45px;
+
+    padding-top: 75px;
+
+    padding-bottom: 65px;
+}
+
+.footer-about p {
+    max-width: 330px;
+
+    margin-top: 18px;
+
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-links a {
+    color: #98a2b3;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+.footer-contact p {
+    margin-bottom: 12px;
+
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #667085;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .portal-btn {
+        padding: 11px 15px;
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
+
+@media (max-width: 850px) {
+
+    /* Navbar */
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+
+    /* Mobile menu */
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px 20px 22px;
+
+        background: #ffffff;
+
+        border-top: 1px solid #e5e7eb;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        box-shadow:
+            0 18px 35px rgba(16, 24, 40, 0.12);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-12px);
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    /* Open menu */
+
+    .nav-menu.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* Links */
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 8px;
+
+        border-bottom: 1px solid #eef0f3;
+
+        font-size: 15px;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease,
+            padding-left 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        padding-left: 14px;
+
+        background: #f8fafc;
+
+        color: #2563eb;
+
+        border-radius: 7px;
+    }
+
+
+    /* Remove desktop underline */
+
+    .nav-links a::after {
+        display: none;
+    }
+
+
+    /* Portal */
+
+    .portal-btn {
+        width: 100%;
+
+        margin-top: 15px;
+
+        padding: 13px;
+    }
+
+
+    /* Hamburger -> X */
+
+    .menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* About Hero */
+
+    .about-hero {
+        min-height: 360px;
+    }
+
+    .about-hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    /* Story */
+
+    .about-story {
+        padding: 75px 0;
+    }
+
+    .about-story-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .about-campus-image {
+        min-height: 330px;
+    }
+
+
+    /* Mission */
+
+    .about-mission {
+        padding: 75px 0;
+    }
+
+    .mission-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Why */
+
+    .why-section {
+        padding: 75px 0;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Statistics */
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px 0;
+    }
+
+    .stat:nth-child(2) {
+        border-right: none;
+    }
+
+
+    /* CTA */
+
+    .about-cta {
+        padding: 75px 20px;
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* Navbar */
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .nav-menu {
+        top: 65px;
+
+        padding: 12px 15px 20px;
+    }
+
+
+    /* Hero */
+
+    .about-hero {
+        min-height: 320px;
+    }
+
+    .about-hero h1 {
+        font-size: 37px;
+    }
+
+    .about-hero p {
+        font-size: 13px;
+    }
+
+
+    /* Story */
+
+    .about-story-text h2 {
+        font-size: 31px;
+    }
+
+    .about-campus-image {
+        min-height: 260px;
+    }
+
+
+    /* Headings */
+
+    .about-heading h2 {
+        font-size: 30px;
+    }
+
+
+    /* Mission */
+
+    .mission-box {
+        padding: 27px 24px;
+    }
+
+
+    /* Why */
+
+    .why-box {
+        padding: 27px 23px;
+    }
+
+
+    /* Stats */
+
+    .stat h2 {
+        font-size: 31px;
+    }
+
+
+    /* CTA */
+
+    .about-cta h2 {
+        font-size: 30px;
+    }
+
+}

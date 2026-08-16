@@ -1,0 +1,1030 @@
+/* =========================================
+   UNIHUB - ACADEMICS
+   COMPLETE RESPONSIVE CSS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #172033;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.logo {
+    color: #111827;
+
+    font-size: 29px;
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    white-space: nowrap;
+
+    z-index: 10001;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+
+/* NAV MENU */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-left: auto;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    position: relative;
+
+    display: inline-block;
+
+    padding: 10px 0;
+
+    color: #475467;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #2563eb;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* PORTAL */
+
+.portal-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.portal-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-2px);
+}
+
+
+/* HAMBURGER */
+
+.menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    z-index: 10002;
+}
+
+.menu-btn span {
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    background: #111827;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.academic-hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            110deg,
+            rgba(10, 27, 58, 0.95),
+            rgba(15, 52, 108, 0.78)
+        ),
+        url("images/campus.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.academic-hero-content {
+    max-width: 760px;
+
+    color: white;
+}
+
+.academic-label {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    color: #bfdbfe;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.academic-label.blue {
+    color: #2563eb;
+}
+
+.academic-hero h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(42px, 6vw, 68px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2.5px;
+}
+
+.academic-hero p {
+    max-width: 650px;
+
+    color: #dbeafe;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.academic-intro {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.academic-intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.academic-intro-text h2 {
+    margin-bottom: 22px;
+
+    color: #101828;
+
+    font-size: clamp(32px, 4vw, 46px);
+
+    line-height: 1.15;
+}
+
+.academic-intro-text p {
+    margin-bottom: 17px;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+.academic-intro-card {
+    padding: 45px;
+
+    background: #f7f9fc;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+.intro-icon {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.academic-intro-card h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+
+    font-size: 22px;
+}
+
+.academic-intro-card p {
+    color: #667085;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin-bottom: 15px;
+
+    color: #101828;
+
+    font-size: clamp(30px, 4vw, 45px);
+
+    line-height: 1.15;
+}
+
+.section-heading p {
+    color: #667085;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   PROGRAMS
+========================================= */
+
+.programs {
+    padding: 100px 0;
+
+    background: #f7f9fc;
+}
+
+.program-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.program-card {
+    padding: 32px 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #b8cdf7;
+
+    box-shadow:
+        0 20px 40px rgba(16, 24, 40, 0.08);
+}
+
+.program-icon {
+    margin-bottom: 18px;
+
+    font-size: 34px;
+}
+
+.program-card h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+
+    font-size: 19px;
+}
+
+.program-card p {
+    margin-bottom: 18px;
+
+    color: #667085;
+
+    font-size: 14px;
+}
+
+.program-card a {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   LEARNING
+========================================= */
+
+.learning {
+    padding: 100px 0;
+
+    background: #ffffff;
+}
+
+.learning-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.learning-card {
+    padding: 30px 25px;
+
+    border: 1px solid #e4e9f1;
+
+    border-radius: 14px;
+
+    transition: 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 40px rgba(16, 24, 40, 0.08);
+}
+
+.learning-number {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.learning-card h3 {
+    margin-bottom: 12px;
+
+    color: #101828;
+
+    font-size: 18px;
+}
+
+.learning-card p {
+    color: #667085;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.academic-stats {
+    padding: 75px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #1d4ed8,
+            #2563eb
+        );
+
+    color: white;
+}
+
+.academic-stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+}
+
+.academic-stat {
+    padding: 10px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.academic-stat:last-child {
+    border-right: none;
+}
+
+.academic-stat h2 {
+    font-size: 42px;
+}
+
+.academic-stat p {
+    color: #dbeafe;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.academic-cta {
+    padding: 90px 0;
+
+    background: #ffffff;
+
+    text-align: center;
+}
+
+.academic-cta h2 {
+    margin-bottom: 15px;
+
+    color: #101828;
+
+    font-size: clamp(30px, 4vw, 45px);
+}
+
+.academic-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 28px;
+
+    color: #667085;
+
+    font-size: 15px;
+}
+
+.academic-button {
+    display: inline-flex;
+
+    padding: 13px 25px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.academic-button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #0b1220;
+
+    color: white;
+}
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 45px;
+
+    padding-top: 75px;
+
+    padding-bottom: 65px;
+}
+
+.footer-about p {
+    max-width: 330px;
+
+    margin-top: 18px;
+
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 18px;
+
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-links a {
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    margin-bottom: 12px;
+
+    color: #98a2b3;
+
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #667085;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .portal-btn {
+        padding: 11px 15px;
+    }
+
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .learning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    /* Hamburger */
+
+    .menu-btn {
+        display: flex;
+    }
+
+
+    /* Mobile menu */
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 15px 20px 22px;
+
+        background: white;
+
+        border-top: 1px solid #e5e7eb;
+
+        border-bottom: 1px solid #e5e7eb;
+
+        box-shadow:
+            0 18px 35px rgba(16, 24, 40, 0.12);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-12px);
+
+        transition:
+            opacity 0.3s ease,
+            visibility 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .nav-menu.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* Links */
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+
+        width: 100%;
+
+        padding: 14px 8px;
+
+        border-bottom: 1px solid #eef0f3;
+
+        font-size: 15px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        padding-left: 14px;
+
+        background: #f8fafc;
+
+        color: #2563eb;
+
+        border-radius: 7px;
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+
+    /* Portal */
+
+    .portal-btn {
+        width: 100%;
+
+        margin-top: 15px;
+
+        padding: 13px;
+    }
+
+
+    /* Hamburger animation */
+
+    .menu-btn.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-btn.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+
+    /* Hero */
+
+    .academic-hero {
+        min-height: 360px;
+    }
+
+    .academic-hero h1 {
+        font-size: 46px;
+    }
+
+
+    /* Intro */
+
+    .academic-intro {
+        padding: 75px 0;
+    }
+
+    .academic-intro-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    /* Programs */
+
+    .programs {
+        padding: 75px 0;
+    }
+
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Learning */
+
+    .learning {
+        padding: 75px 0;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Stats */
+
+    .academic-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 30px 0;
+    }
+
+    .academic-stat:nth-child(2) {
+        border-right: none;
+    }
+
+
+    /* CTA */
+
+    .academic-cta {
+        padding: 75px 20px;
+    }
+
+
+    /* Footer */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .nav-menu {
+        top: 65px;
+    }
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .academic-hero {
+        min-height: 320px;
+    }
+
+    .academic-hero h1 {
+        font-size: 37px;
+    }
+
+    .academic-hero p {
+        font-size: 13px;
+    }
+
+    .academic-intro-text h2 {
+        font-size: 31px;
+    }
+
+    .academic-intro-card {
+        padding: 30px 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .program-card {
+        padding: 27px 24px;
+    }
+
+    .learning-card {
+        padding: 27px 23px;
+    }
+
+    .academic-stat h2 {
+        font-size: 31px;
+    }
+
+    .academic-cta h2 {
+        font-size: 30px;
+    }
+}

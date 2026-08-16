@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Portal | UniHub</title>
+
+    <link
+        rel="stylesheet"
+        href="studentportal.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header class="portal-header">
+
+        <nav class="portal-navbar">
+
+            <a
+                href="index.html"
+                class="portal-logo"
+            >
+                Uni<span>Hub</span>
+            </a>
+
+            <ul class="portal-nav-links">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="academics.html">
+                        Academics
+                    </a>
+                </li>
+
+                <li>
+                    <a href="admission.html">
+                        Admissions
+                    </a>
+                </li>
+
+                <li>
+                    <a href="news.html">
+                        News
+                    </a>
+                </li>
+
+                <li>
+                    <a href="events.html">
+                        Events
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <a
+                href="studentportal.html"
+                class="portal-button active"
+            >
+                Student Portal
+            </a>
+
+            <button
+                class="portal-menu"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <div class="portal-mobile-menu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="academics.html">
+            Academics
+        </a>
+
+        <a href="admission.html">
+            Admissions
+        </a>
+
+        <a href="news.html">
+            News
+        </a>
+
+        <a href="events.html">
+            Events
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="studentportal.html"
+            class="mobile-portal-active"
+        >
+            Student Portal
+        </a>
+
+    </div>
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="portal-hero">
+
+        <div class="portal-container">
+
+            <div class="portal-hero-content">
+
+                <span class="portal-label">
+                    UNIHUB STUDENT SERVICES
+                </span>
+
+                <h1>
+                    Student Portal
+                </h1>
+
+                <p>
+                    Access your academic information,
+                    courses, announcements, results and
+                    student services all in one place.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LOGIN SECTION
+         ===================================================== -->
+
+    <section class="portal-login-section">
+
+        <div class="portal-container">
+
+            <div class="portal-login-layout">
+
+                <!-- LEFT SIDE -->
+
+                <div class="portal-login-info">
+
+                    <span class="portal-section-label">
+                        STUDENT ACCESS
+                    </span>
+
+                    <h2>
+                        Welcome Back
+                    </h2>
+
+                    <p>
+                        Sign in to your UniHub student account
+                        to access your academic dashboard and
+                        student services.
+                    </p>
+
+                    <div class="portal-benefits">
+
+                        <div class="portal-benefit">
+
+                            <div class="benefit-icon">
+                                ✓
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Academic Records
+                                </h3>
+
+                                <p>
+                                    View your courses,
+                                    results and academic progress.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="portal-benefit">
+
+                            <div class="benefit-icon">
+                                ✓
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Student Services
+                                </h3>
+
+                                <p>
+                                    Access important university
+                                    services and resources.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="portal-benefit">
+
+                            <div class="benefit-icon">
+                                ✓
+                            </div>
+
+                            <div>
+                                <h3>
+                                    Important Updates
+                                </h3>
+
+                                <p>
+                                    Stay informed about university
+                                    announcements and events.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <div class="portal-login-card">
+
+                    <div class="login-card-header">
+
+                        <div class="login-icon">
+                            🎓
+                        </div>
+
+                        <h2>
+                            Student Login
+                        </h2>
+
+                        <p>
+                            Enter your details to continue
+                        </p>
+
+                    </div>
+
+
+                    <form
+                        class="portal-login-form"
+                        id="portalLoginForm"
+                    >
+
+                        <div class="portal-form-group">
+
+                            <label for="student-id">
+                                Student ID
+                            </label>
+
+                            <input
+                                type="text"
+                                id="student-id"
+                                name="student-id"
+                                placeholder="Enter your student ID"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="portal-form-group">
+
+                            <label for="student-password">
+                                Password
+                            </label>
+
+                            <div class="password-wrapper">
+
+                                <input
+                                    type="password"
+                                    id="student-password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passwordToggle"
+                                    aria-label="Show password"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="login-options">
+
+                            <label class="remember-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberStudent"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                            <a href="#">
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="login-submit"
+                        >
+                            Sign In
+                            <span>→</span>
+                        </button>
+
+
+                        <div
+                            class="login-message"
+                            id="loginMessage"
+                        ></div>
+
+                    </form>
+
+
+                    <div class="login-help">
+
+                        <p>
+                            Need help accessing your account?
+                        </p>
+
+                        <a href="contact.html">
+                            Contact Student Support
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PORTAL FEATURES
+         ===================================================== -->
+
+    <section class="portal-features">
+
+        <div class="portal-container">
+
+            <div class="portal-section-heading">
+
+                <span class="portal-section-label">
+                    STUDENT SERVICES
+                </span>
+
+                <h2>
+                    Everything You Need
+                </h2>
+
+                <p>
+                    Quickly access the most important
+                    student resources and services.
+                </p>
+
+            </div>
+
+
+            <div class="portal-feature-grid">
+
+
+                <!-- CARD 1 -->
+
+                <a
+                    href="#"
+                    class="portal-feature-card"
+                >
+
+                    <div class="feature-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            My Courses
+                        </h3>
+
+                        <p>
+                            View your registered courses,
+                            schedules and course information.
+                        </p>
+
+                    </div>
+
+                    <span class="feature-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- CARD 2 -->
+
+                <a
+                    href="#"
+                    class="portal-feature-card"
+                >
+
+                    <div class="feature-icon">
+                        📊
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Results
+                        </h3>
+
+                        <p>
+                            Check your examination results
+                            and academic performance.
+                        </p>
+
+                    </div>
+
+                    <span class="feature-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- CARD 3 -->
+
+                <a
+                    href="#"
+                    class="portal-feature-card"
+                >
+
+                    <div class="feature-icon">
+                        📝
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Course Registration
+                        </h3>
+
+                        <p>
+                            Register and manage your courses
+                            for the academic session.
+                        </p>
+
+                    </div>
+
+                    <span class="feature-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- CARD 4 -->
+
+                <a
+                    href="#"
+                    class="portal-feature-card"
+                >
+
+                    <div class="feature-icon">
+                        💳
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Fees & Payments
+                        </h3>
+
+                        <p>
+                            View fees, payment information
+                            and financial records.
+                        </p>
+
+                    </div>
+
+                    <span class="feature-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- CARD 5 -->
+
+                <a
+                    href="#"
+                    class="portal-feature-card"
+                >
+
+                    <div class="feature-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Academic Calendar
+                        </h3>
+
+                        <p>
+                            Stay up to date with important
+                            academic dates and deadlines.
+                        </p>
+
+                    </div>
+
+                    <span class="feature-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- CARD 6 -->
+
+                <a
+                    href="#"
+                    class="portal-feature-card"
+                >
+
+                    <div class="feature-icon">
+                        📖
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Digital Library
+                        </h3>
+
+                        <p>
+                            Access digital learning resources,
+                            books and academic materials.
+                        </p>
+
+                    </div>
+
+                    <span class="feature-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         QUICK INFORMATION
+         ===================================================== -->
+
+    <section class="portal-information">
+
+        <div class="portal-container">
+
+            <div class="portal-information-grid">
+
+
+                <!-- ANNOUNCEMENTS -->
+
+                <div class="portal-info-card">
+
+                    <div class="info-card-header">
+
+                        <div>
+
+                            <span class="portal-section-label">
+                                ANNOUNCEMENTS
+                            </span>
+
+                            <h2>
+                                Latest Updates
+                            </h2>
+
+                        </div>
+
+                        <span class="info-header-icon">
+                            📢
+                        </span>
+
+                    </div>
+
+
+                    <div class="announcement-list">
+
+                        <div class="announcement-item">
+
+                            <div class="announcement-date">
+                                <strong>
+                                    20
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    New Student Orientation
+                                </h3>
+
+                                <p>
+                                    Orientation activities begin
+                                    for newly admitted students.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="announcement-item">
+
+                            <div class="announcement-date">
+                                <strong>
+                                    25
+                                </strong>
+
+                                <span>
+                                    AUG
+                                </span>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Academic Workshop
+                                </h3>
+
+                                <p>
+                                    Join the upcoming academic
+                                    success workshop.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="announcement-item">
+
+                            <div class="announcement-date">
+                                <strong>
+                                    02
+                                </strong>
+
+                                <span>
+                                    SEP
+                                </span>
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Research Conference
+                                </h3>
+
+                                <p>
+                                    Students are invited to attend
+                                    the research and innovation event.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="news.html"
+                        class="info-view-link"
+                    >
+                        View All News →
+                    </a>
+
+                </div>
+
+
+                <!-- SUPPORT -->
+
+                <div class="portal-info-card support-card">
+
+                    <div class="support-icon">
+                        💬
+                    </div>
+
+                    <span class="portal-section-label">
+                        NEED HELP?
+                    </span>
+
+                    <h2>
+                        Student Support
+                    </h2>
+
+                    <p>
+                        Having trouble with your account,
+                        courses, registration or another
+                        student service?
+                    </p>
+
+                    <div class="support-details">
+
+                        <div>
+                            <strong>
+                                Email
+                            </strong>
+
+                            <span>
+                                support@unihub.edu
+                            </span>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Phone
+                            </strong>
+
+                            <span>
+                                +234 000 000 0000
+                            </span>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Hours
+                            </strong>
+
+                            <span>
+                                Mon - Fri, 8AM - 5PM
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <a
+                        href="contact.html"
+                        class="support-button"
+                    >
+                        Contact Support →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="portal-footer">
+
+        <div class="portal-container">
+
+            <div class="portal-footer-grid">
+
+
+                <!-- ABOUT -->
+
+                <div class="portal-footer-about">
+
+                    <a
+                        href="index.html"
+                        class="portal-logo footer-logo"
+                    >
+                        Uni<span>Hub</span>
+                    </a>
+
+                    <p>
+                        Empowering students through education,
+                        innovation and community.
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="portal-footer-links">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="academics.html">
+                        Academics
+                    </a>
+
+                    <a href="admission.html">
+                        Admissions
+                    </a>
+
+                </div>
+
+
+                <!-- RESOURCES -->
+
+                <div class="portal-footer-links">
+
+                    <h3>
+                        Resources
+                    </h3>
+
+                    <a href="news.html">
+                        News
+                    </a>
+
+                    <a href="events.html">
+                        Events
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="studentportal.html">
+                        Student Portal
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <div class="portal-footer-contact">
+
+                    <h3>
+                        Student Support
+                    </h3>
+
+                    <p>
+                        Email: richieik25@gmail.com
+                    </p>
+
+                    <p>
+                        Phone: +234 810 6144 219
+                    </p>
+
+                    <p>
+                        Monday - Friday
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="portal-footer-bottom">
+
+                <p>
+                    © 2026 UniHub. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="studentportal.js"></script>
+
+</body>
+</html>
